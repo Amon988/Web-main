@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: arial, sans-serif;
+    background-image: url("./white.jpg");
+    background-size: cover; /* Háttér optimalizálása */
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Fehér színű szöveg */
+}
+
+h1 {
+    text-align: center;
+    color: white !important;
+    font-weight: bolder;
+    flex-grow: 1;
+    margin-left: 0;
+    font-size: 36px; /* A főcímhez nem történik változtatás */
+}
+
+.topnav {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1000;
+}
+
+.topnav h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 36px; /* A főcím fontméretének megőrzése */
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px; /* A menüpontok betűméretének növelése */
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.btn {
+    color: black;
+    background-color: white !important;
+    border-radius: 35px !important;
+    height: 45px;
+    width: 120px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0px 10px;
+    font-size: 20px; /* A gombok szövegének betűméretének növelése */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Mobilbarát nézet */
+@media screen and (max-width: 858px),
+       screen and(max-height:320px) {
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 28px; /* A főcím betűméretének csökkentése mobil nézethez */
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 5px 0;
+        font-size: 18px; /* Gombok betűméretének csökkentése mobil nézetben */
+    }
+}
+
+/* Informational szöveg blokkolása */
+.Informational {
+    margin-top: 80px; /* hozzáadva, hogy a tartalom ne takarja el a topnav */
+    padding: 20px;
+    text-align: left;
+}
+
+.info-block {
+    display: block;
+}
+
+.info-block h3 {
+    margin-bottom: 10px; /* kisebb távolságot adunk a cím és a szöveg között */
+    font-size: 30px; /* Fejléc szövegének növelése */
+}
+
+.info-block p {
+    line-height: 1.6; /* könnyebben olvashatóvá teszi a szöveget */
+    font-size: 20px; /* A szöveg betűméretének növelése */
+}
+
+/* Lista elemek betűméretének növelése */
+ul, ol {
+    font-size: 22px; /* A lista elemek betűméretének növelése */
+    line-height: 1.8; /* Jobb olvashatóság */
+}
+
+li {
+    margin-bottom: 10px; /* Kis távolság a listaelemek között */
+}
