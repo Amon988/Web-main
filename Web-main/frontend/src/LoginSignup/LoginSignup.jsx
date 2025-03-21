@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../css/LoginSignup.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import DungeonBook from "../DungeonBook/DungeonBook";
 
 const LoginSignup = () => {
     const [action, setAction] = useState('login'); // Kezdeti állapot: login
@@ -233,6 +234,7 @@ const LoginSignup = () => {
                         </div>
                     )}
                 </div>
+                <DungeonBook/>
             </div>
         </div>
     );
