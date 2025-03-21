@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: arial, sans-serif;
-    background-image: url("./white.jpg");
     background-size: cover; /* Háttér optimalizálása */
     background-position: center;
     background-attachment: fixed;
