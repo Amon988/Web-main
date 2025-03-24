@@ -1,129 +1,171 @@
+/* Reset and Base Styles */
 body {
     margin: 0;
-    font-family: arial, sans-serif;
-    background-size: cover; /* Háttér optimalizálása */
-    background-position: center;
-    background-attachment: fixed;
-    color: white; /* Fehér színű szöveg */
+    font-family: 'Poppins', Arial, sans-serif; /* Use a modern font */
+    background-color: #f5f7fa; /* Light background for contrast */
 }
-
-h1 {
-    text-align: center;
-    color: white !important;
-    font-weight: bolder;
-    flex-grow: 1;
-    margin-left: 0;
-    font-size: 36px; /* A főcímhez nem történik változtatás */
+p{
+    font-size: x-large !important;
 }
-
+li{
+    font-size: 40px !important;
+}
+.kep{
+    width: 35%;
+    height: 35%;
+}
+/* Top Navigation */
 .topnav {
-    background-color: #333;
-    padding: 10px;
+    background: linear-gradient(90deg, #2c3e50, #3498db); /* Gradient background */
+    padding: 15px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 1000;
 }
 
 .topnav h1 {
-    flex-grow: 1;
+    color: black;
+    font-weight: 700;
+    font-size: 28px;
     text-align: center;
     margin: 0;
-    font-size: 36px; /* A főcím fontméretének megőrzése */
-}
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 22px; /* A menüpontok betűméretének növelése */
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    flex-grow: 1;
+    font-size: bolder !important;
 }
 
 .btn {
-    color: black;
-    background-color: white !important;
-    border-radius: 35px !important;
-    height: 45px;
-    width: 120px;
+    color: black !important;
+    background-color:antiquewhite !important; /* Primary blue */
+    border: none;
+    border-radius: 25px !important;
+    height: 50px;
+    width: 150px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 0px 10px;
-    font-size: 20px; /* A gombok szövegének betűméretének növelése */
+    transition: all 0.3s ease;
+    font-size: 20px !important;
+}
+
+.btn:hover {
+    background-color: #2980b9 !important; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.btn:hover {
-    background-color: #ddd;
+/* Informational Section */
+.Informational {
+    margin-top: 100px; /* More space for fixed nav */
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
 }
 
-/* Mobilbarát nézet */
-@media screen and (max-width: 858px),
-       screen and(max-height:320px) {
+.Informational h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50; /* Darker color for headings */
+    margin-bottom: 20px;
+}
+
+.Informational p {
+    font-size: 18px;
+    color: #7f8c8d; /* Softer gray for text */
+    line-height: 1.8;
+}
+
+/* Info Blocks (Helpful Guides & Community) */
+.info-block {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease; /* Animation for hover */
+}
+
+.info-block:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.info-block h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.info-block ul {
+    padding-left: 0;
+}
+
+.info-block ul li {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.info-block img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-block img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 858px) {
     .topnav {
         flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
+        padding: 20px 0;
     }
 
-    h1 {
-        font-size: 28px; /* A főcím betűméretének csökkentése mobil nézethez */
+    .topnav h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 
     .button-container {
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        gap: 10px;
     }
 
     .btn {
         width: 80%;
-        margin: 5px 0;
-        font-size: 18px; /* Gombok betűméretének csökkentése mobil nézetben */
     }
-}
 
-/* Informational szöveg blokkolása */
-.Informational {
-    margin-top: 80px; /* hozzáadva, hogy a tartalom ne takarja el a topnav */
-    padding: 20px;
-    text-align: left;
-}
+    .Informational h3 {
+        font-size: 26px;
+    }
 
-.info-block {
-    display: block;
-}
+    .Informational p {
+        font-size: 16px;
+    }
 
-.info-block h3 {
-    margin-bottom: 10px; /* kisebb távolságot adunk a cím és a szöveg között */
-    font-size: 30px; /* Fejléc szövegének növelése */
-}
+    .info-block h2 {
+        font-size: 22px;
+    }
 
-.info-block p {
-    line-height: 1.6; /* könnyebben olvashatóvá teszi a szöveget */
-    font-size: 20px; /* A szöveg betűméretének növelése */
-}
-
-/* Lista elemek betűméretének növelése */
-ul, ol {
-    font-size: 22px; /* A lista elemek betűméretének növelése */
-    line-height: 1.8; /* Jobb olvashatóság */
-}
-
-li {
-    margin-bottom: 10px; /* Kis távolság a listaelemek között */
+    .info-block ul li {
+        font-size: 14px;
+    }
 }

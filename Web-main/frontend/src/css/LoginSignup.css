@@ -77,8 +77,20 @@ color: orange;
 .password-strength p.strong {
 color: green;
 }
+.forgot-password{
+  text-align: center;
+  margin-top: 15px;
+}
 
+.forgot-password a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
 
+.forgot-password a:hover{
+  text-decoration: underline;
+}
 .modal-overlay{
 position: fixed;
 top: 0;
@@ -207,4 +219,7 @@ form .register-link {
 .error {
   color: red;
   margin-top: 10px;
+}
+.termsConditions{
+  margin-left: 50px;
 }
