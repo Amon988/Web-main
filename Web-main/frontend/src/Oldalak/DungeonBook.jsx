@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import '../css/DungeonBook.css';
- 
+
 const DungeonBook = () => {
     const [page, setPage] = useState(1);
- 
+
     // Téma oldalak, amelyeket megjelenítünk
     const pages = [
         {
@@ -12,14 +12,14 @@ const DungeonBook = () => {
                         Dungeon Valley Explorer takes place in a fictional world filled with elements from the knightly age and various allusions, as well as different locations and battles, which are resolved through text-based options.
                         There are various NPCs in different places who can be asked for help.
                         However, there is also another way to seek assistance: the aids within the attack, which include the Skill and Magic sections.
- 
+
                         Hero:
                         You are the main character that you control in the game, and here is what you should know about him:
                         You can name your hero! The hero has physical protection, magical protection, health, ability, and experience (which you can accumulate through experience points).
                         Of course, you also play as the hero, so you can track these attributes during the game.
                         We receive different weapons and armor that can help us in battles.
                         The hero’s abilities are not overlooked either. He has two types of abilities:
- 
+
                         One type is a specific skill, like better sword handling.
                         The other type is a fantasy-based ability, such as a super-powerful blow or punch.
                         The hero also has his own magic, which can heal his life (Self-care/Heal).
@@ -40,13 +40,13 @@ const DungeonBook = () => {
                         However, some races deal weaker damage, and while they still have resistance, their attacks are less dangerous.
                         The damage levels are: neutralizing/null < endured/tolerant < resistant < weak < deadly/fatal.
                         These are the levels of damage different races can deal.
- 
+
                         Monsters also play an important role in the game, as they are the enemies you fight against.
                         Monsters have health, physical protection, and magical protection.
                         Their offensive power varies, and they have abilities that they use during combat.
                         Monsters also have their own species and behaviors, which influence how they act during combat.
                         They appear in various locations with varying strengths!
- 
+
                         At this point, AI comes into play, determining the thinking and behavior of monsters.
                         The AI must randomly choose one of the available behaviors for monsters in combat. `,
         },    
@@ -56,24 +56,24 @@ const DungeonBook = () => {
                     Environmental hazards can include ravines, traps, thorny bushes, or lava. These are just a few examples of the dangers that can be encountered.
                     Environmental hazards have attack power, damage types, critical attack chances, and attack multipliers.
                     Some hazards also have special abilities, which are hidden in specific locations.
- 
+
                     Dungeon exploration is a core part of the game, contributing to its complexity and difficulty.
                     You can progress forward, backward, or even leave the dungeon during exploration.
                     You may also decide to leave the dungeon if you choose to stop exploring. Going backward represents rest.
                     If you move forward, you won’t know what you might encounter. Only after exploring all areas in the dungeon can you complete it.
                     If you leave the dungeon, you retain experience and money, but any progress related to the mission will be lost, and you'll have to start over.
- 
+
                     The rest feature can only be used once per dungeon, allowing you to regain health and magic points.
                     However, resting does not guarantee safety, as you may lose money, items, or potions, or even be attacked.
                     If you decide to retreat before resting, the risk of these events is reduced. However, enemies may reappear in previously discovered rooms. `,
         },
         {
             title: "Skill and Magic",
-            content : `  Skills are unique abilities in the game.
+            content: `  Skills are unique abilities in the game.
                         These skills have a critical attack chance, which is enhanced by a multiplier.
                         Each skill has special effects, and there is a range beyond which it cannot reach. Using
                         these skills may come at a cost, and their reload times may be extended.
- 
+
                         Magic plays an important role in the game. It has its own detailed description, but there
                         are a few key points to know.
                         Magic has attack and damage values, and different types of magic exist.
@@ -86,7 +86,7 @@ const DungeonBook = () => {
             content: ` There are detailed descriptions of the items you can use in the game, and some additional points worth noting.
                         Items have special abilities, but they require in-game currency to use.
                         You do not need to pay real money; instead, you use money earned in the game.
- 
+
                         Weapons are vital in the game. The strength of a weapon depends on its type and its ability to deal damage.
                         Some weapons can deal critical damage, which can be amplified by a special multiplier.
                         Each weapon has a unique effect on opponents, and their range differs—swords and spears, for example, have different lengths.
@@ -99,8 +99,8 @@ const DungeonBook = () => {
                         impact on gameplay. `,
         },
         {
-            title:      "The NPC's of the city",
-            content:    ` There are different NPCs located throughout the city.
+            title: "The NPC's of the city",
+            content: ` There are different NPCs located throughout the city.
                         At the Blacksmith, you can upgrade your own and your teammates' armor and weaponry, or have new items made.
                         However, the Blacksmith cannot make weapons or armor without limits. You will need to pay for these upgrades, and there are restrictions on how often they can be done.
                         At the Alchemist, you can obtain various potions for yourself and your teammates.
@@ -119,25 +119,39 @@ const DungeonBook = () => {
                         doesn't want to use them or hasn't unlocked them as usable characters. `,
         }
     ];
- 
+
     const nextPage = () => {
         if (page < pages.length) {
             setPage(page + 1);
         }
     };
- 
+
     const prevPage = () => {
         if (page > 1) {
             setPage(page - 1);
         }
     };
- 
+
     return (
         <div className="dungeon-book-container">
             <div className="book">
-                <div className="page">
-                    <h2>{pages[page - 1].title}</h2>
-                    <p>{pages[page - 1].content}</p>
+                <div className="book-inner">
+                    {/* Left Page */}
+                    <div className="page left-page">
+                        {page > 1 ? (
+                            <>
+                                <h2>{pages[page - 2].title}</h2>
+                                <p>{pages[page - 2].content}</p>
+                            </>
+                        ) : (
+                            <div className="empty-page"> </div>
+                        )}
+                    </div>
+                    {/* Right Page */}
+                    <div className="page right-page">
+                        <h2>{pages[page - 1].title}</h2>
+                        <p>{pages[page - 1].content}</p>
+                    </div>
                 </div>
             </div>
             <div className="navigation">
@@ -147,5 +161,5 @@ const DungeonBook = () => {
         </div>
     );
 };
- 
+
 export default DungeonBook;

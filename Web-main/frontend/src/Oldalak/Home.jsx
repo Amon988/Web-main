@@ -32,20 +32,7 @@ const App = () => {
         <br />
         <br />
         <div className="row">
-          <div className="col-12">
-            <h1>Learn about the game.</h1>
-            <br />
-            <div className="col-md-12">
-              <p>
-                The game will be a text-based dungeon crawler. There is a Main menu with account management system
-                e.g. :(add new user), an easy-to-understand <a href="#">tutorial</a>, a city including shops, quests,
-                and party management. From here, you can start exploring a dungeon. The combat system is the most complex part.
-                There is also an inventory system with usable items and consumables e.g. :(Healing potion).
-              </p>
-              <br />
-            </div>
-            <DungeonBook />
-          </div>
+         <DungeonBook/>
         </div>
       </div>
     </>

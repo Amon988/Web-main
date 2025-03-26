@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif; /* Use a modern font */
-    background-color: #f5f7fa; /* Light background for contrast */
+    background-color: #f5f7fa !important; /* Light background for contrast */
 }
 p{
     font-size: x-large !important;
@@ -11,8 +11,8 @@ li{
     font-size: 40px !important;
 }
 .kep{
-    width: 35%;
-    height: 35%;
+    width: 100%;
+    height: 100%;
 }
 /* Top Navigation */
 .topnav {

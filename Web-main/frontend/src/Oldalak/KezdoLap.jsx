@@ -58,6 +58,19 @@ const KezdoLap = () => {
                 <div className="col-md-6 text-center">
                     <img src="/electonicbook.png" alt="Friendly Community" className="img-fluid kep" />
                 </div>
+                <div className="col-12">
+            <h1>Learn about the game.</h1>
+            <br />
+            <div className="col-md-12">
+              <p>
+                The game will be a text-based dungeon crawler. There is a Main menu with account management system
+                e.g. :(add new user), an easy-to-understand tutorial, a city including shops, quests,
+                and party management. From here, you can start exploring a dungeon. The combat system is the most complex part.
+                There is also an inventory system with usable items and consumables e.g. :(Healing potion).
+              </p>
+              <br />
+            </div>
+          </div>
             </section>
         </div>
     );
